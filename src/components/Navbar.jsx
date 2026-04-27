@@ -29,7 +29,7 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed w-full top-0 z-50 bg-sky-300/60 backdrop-blur-md transition-all duration-300 ${
+      className={`fixed w-full top-0 z-50 bg-orange-300/60 backdrop-blur-md transition-all duration-300 ${
         scrolled ? 'shadow-lg' : 'shadow-sm'
       }`}
     >

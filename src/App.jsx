@@ -29,7 +29,7 @@ function App() {
     <Router>
   <ScrollToTop />   {/* 👈 ADD THIS LINE */}
 
-  <div className="bg-gradient-to-b from-slate-50 via-slate-50 to-slate-100 min-h-screen pt-2 overflow-x-hidden">
+ <div className="bg-gradient-to-b from-orange-100 via-orange-50 to-sky-100 min-h-screen pt-2 overflow-x-hidden">
     <Navbar isScrolled={isScrolled} />
 
     <AnimatePresence mode="wait">
@@ -41,6 +41,7 @@ function App() {
         <Route path="/packages" element={<HealthPackages />} />
         <Route path="/patient-info" element={<PatientInfo />} />
         <Route path="/contact" element={<Contact />} />
+        
       </Routes>
     </AnimatePresence>
 

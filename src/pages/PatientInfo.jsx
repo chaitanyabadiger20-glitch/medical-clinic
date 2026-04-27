@@ -89,7 +89,7 @@ export default function PatientInfo() {
       </section>
 
       {/* Insurance Section */}
-      <section className="bg-gradient-to-r from-slate-50 to-blue-50 py-20">
+      <section className="section-padding bg-gradient-to-b from-orange-100 via-orange-50 to-sky-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -257,7 +257,7 @@ export default function PatientInfo() {
       </section>
 
       {/* FAQ Section */}
-<section className="bg-light py-20">
+<section className="bg-orange-50 py-20">
   <div className="max-w-5xl mx-auto px-4 md:px-6 lg:px-8">
 
     {/* Heading */}
@@ -277,7 +277,7 @@ export default function PatientInfo() {
     </motion.div>
 
     {/* FAQ Box */}
-    <div className="bg-white rounded-2xl shadow-card p-6 md:p-8 ">
+    <div className="bg-orange-100 rounded-2xl shadow-card p-6 md:p-8 ">
 
       {faqs.map((faq, idx) => (
         <FAQAccordion
@@ -320,7 +320,7 @@ export default function PatientInfo() {
                 href="mailto:info@arogyaroyale.com"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-outline text-white border-white hover:bg-white hover:text-navy-950 inline-flex items-center justify-center gap-2"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-yellow-500 text-white font-medium shadow-[0_4px_20px_rgba(234,179,8,0.5)] hover:shadow-[0_6px_25px_rgba(234,179,8,0.7)] transition"
               >
                 Email Us
               </motion.a>

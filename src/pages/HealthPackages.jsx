@@ -105,7 +105,7 @@ export default function HealthPackages() {
       </section>
 
       {/* Comparison Table */}
-      <section className="bg-light py-20">
+      <section className="section-padding bg-gradient-to-b from-orange-100 via-orange-50 to-sky-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -141,7 +141,7 @@ export default function HealthPackages() {
               <tbody>
                 {[
                   { name: 'Blood Tests', basic: true, premium: true, executive: true, platinum: true },
-                  { name: 'X-Ray & ECG', basic: false, premium: true, executive: true, platinum: true },
+                  { name: 'X-Ray & ECG', basic: true, premium: true, executive: true, platinum: true },
                   { name: 'Ultrasound', basic: false, premium: false, executive: true, platinum: true },
                   { name: 'CT Scan', basic: false, premium: false, executive: false, platinum: true },
                   { name: 'Doctor Consultation', basic: true, premium: true, executive: true, platinum: true },
@@ -169,7 +169,7 @@ export default function HealthPackages() {
           </motion.div>
         </div>
       </section>
-<section className="max-w-6xl mx-auto px-6 py-20">
+<section className="max-w-6xl mx-auto px-6 py-20 bg-orange-100">
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -191,7 +191,7 @@ export default function HealthPackages() {
     ].map((faq, idx) => (
       <motion.div
         key={idx}
-        className="bg-white rounded-xl p-6 shadow-card border border-black"
+        className="bg-orange-50 rounded-xl p-6 shadow-card border border-black"
       >
         <h3 className="font-bold text-navy-950 mb-2">{faq.q}</h3>
         <p className="text-slate-600">{faq.a}</p>

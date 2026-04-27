@@ -231,7 +231,7 @@ const [selectedPackage, setSelectedPackage] = useState(
   viewport={{ once: true }}
   className="lg:col-span-2"
 >
-  <div className="bg-white rounded-3xl shadow-luxury p-8 lg:p-12 border border-black">
+  <div className="bg-orange-200 rounded-3xl shadow-luxury p-8 lg:p-12 border border-black">
 
     <h2 className="text-3xl font-bold text-navy-950 mb-2">
       Book Your Appointment
@@ -276,7 +276,7 @@ const [selectedPackage, setSelectedPackage] = useState(
       </section>
 
       {/* Map Section */}
-      <section className="w-full bg-light py-20">
+      <section className="w-full bg-orange-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

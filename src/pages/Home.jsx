@@ -213,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="section-padding bg-light">
+      <section className="section-padding bg-gradient-to-b from-orange-100 via-orange-50 to-sky-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -310,7 +310,7 @@ export default function Home() {
       <StatsSection />
 
       {/* Featured Departments */}
-      <section className="section-padding bg-light">
+      <section className="section-padding bg-gradient-to-b from-orange-100 via-orange-50 to-sky-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -353,7 +353,7 @@ export default function Home() {
       </section>
 
       {/* Featured Doctors */}
-      <section className="section-padding bg-gradient-to-b from-light to-slate-50">
+      <section className="section-padding bg-gradient-to-b from-orange-100 via-orange-50 to-sky-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -396,7 +396,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-light">
+      <section className="section-padding bg-gradient-to-b from-orange-100 via-orange-50 to-sky-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"

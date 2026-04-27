@@ -18,7 +18,7 @@ html, body {
 }
 
 body {
-  @apply bg-light font-sans text-slate-700;
+  @apply bg-orange-100 font-sans text-slate-700;
   letter-spacing: 0.3px;
 }
 
