@@ -1,7 +1,7 @@
 export const images = {
   // Hero Images
   heroMain: 'https://www.hospertz.com/wp-content/uploads/2024/04/1211112c7b41-1024x644.png',
-  heroAlt: 'https://img.freepik.com/premium-photo/modern-luxury-hospital-room-interior-with-empty-bed_1262542-106807.jpg?w=1380',
+  heroAlt: 'https://www.bhrcindia.com/wp-content/uploads/2022/11/1-1.jpeg',
   
   // Department Icons/Images
   departments: {
@@ -14,12 +14,12 @@ export const images = {
   },
 
   // Facility Images
-  facility1: 'https://luxuryleisureaffluence.com/wp-content/uploads/2024/07/Default_Luxury_hospital_suites_rendered_in_lavish_digital_pain_1-1024x579.jpg',
+  facility1: 'https://www.bhrcindia.com/wp-content/uploads/2022/11/1-1.jpeg',
   facility2: 'https://www.usfoods.com/content/dam/dce/images/great-food/food-trends/summer-2024/7-be-better/Be-Better_800px-2.jpg',
   facility3: 'https://cdn.prod.website-files.com/642863d2afa62c75255d4ecd/65f3a99fcfa1e2a049a488e7_long-distance-wheelchair-transportation.jpg',
 
   // Stats/Why Choose Us
-  whyChoose: 'https://tse2.mm.bing.net/th/id/OIP.5Bge-aB1T2Vq2LdhEODEpAHaEJ?pid=Api&h=220&P=00',
+  whyChoose: 'https://www.bhrcindia.com/wp-content/uploads/2022/11/1-1.jpeg',
 
   // Map (placeholder)
   map: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80',
