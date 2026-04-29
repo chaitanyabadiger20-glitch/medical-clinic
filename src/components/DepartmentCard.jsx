@@ -55,15 +55,15 @@ export default function DepartmentCard({ department, index }) {
           </div>
 
           {/* Button */}
-          <Link
-            to={`/departments?dept=${department.id}`}
+         <Link
+               to={`/doctors?dept=${department.name.toLowerCase()}`}
             className="inline-flex items-center gap-2 text-royal-600 font-semibold group/btn hover:text-gold transition-colors"
-          >
-            Learn More
+             >
+             Learn More
             <ArrowRight
-              size={18}
-              className="group-hover/btn:translate-x-2 transition-transform"
-            />
+               size={18}
+                 className="group-hover/btn:translate-x-2 transition-transform"
+                />
           </Link>
         </div>
 

@@ -3,11 +3,23 @@ import { motion } from 'framer-motion';
 import DoctorCard from '../components/DoctorCard';
 import { doctors } from '../data/doctors';
 import { Search, Filter } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function Doctors() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedAvailability, setSelectedAvailability] = useState('all');
+  const [searchParams] = useSearchParams();
+  const deptFromURL = searchParams.get('dept');
+  useEffect(() => {
+  if (deptFromURL) {
+    const formatted =
+      deptFromURL.charAt(0).toUpperCase() + deptFromURL.slice(1);
+
+    setSelectedDepartment(formatted);
+  }
+}, [deptFromURL]);
 
   const departments = ['all', 'Cardiology', 'Orthopedics', 'Dermatology', 'Neurology', 'Pediatrics', 'Dentistry'];
 
@@ -18,11 +30,13 @@ export default function Doctors() {
     const matchesAvailability = selectedAvailability === 'all' || doc.availability === selectedAvailability;
     return matchesSearch && matchesDepartment && matchesAvailability;
   });
+  
 
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative h-96 flex items-center  overflow-hidden bg-light">
+     {!deptFromURL && (
+  <section className="relative h-96 flex items-center overflow-hidden bg-light">
         <div className="absolute inset-0 z-0">
           <img
             src="https://www.bsmu.by/upload/iblock/e20/hxf4mg7k0zqw3f8zztoxtyarehv9qz2k/Group_640_1_.jpg"
@@ -46,10 +60,12 @@ export default function Doctors() {
             </p>
           </motion.div>
         </div>
-      </section>
+        </section>
+)}
 
       {/* Filters Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {!deptFromURL && (
+  <section className="max-w-7xl mx-auto px-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -116,8 +132,14 @@ export default function Doctors() {
             </div>
           </div>
         </motion.div>
-      </section>
-
+       </section>
+)}
+       {/* 👇 ADD THIS HERE */}
+   {deptFromURL && (
+  <h1 className="text-3xl font-bold text-center my-8">
+    {deptFromURL.charAt(0).toUpperCase() + deptFromURL.slice(1)} Doctors
+  </h1>
+ )}
       {/* Doctors Grid */}
       
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">

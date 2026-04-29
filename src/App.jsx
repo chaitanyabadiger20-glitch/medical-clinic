@@ -41,6 +41,8 @@ function App() {
         <Route path="/packages" element={<HealthPackages />} />
         <Route path="/patient-info" element={<PatientInfo />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/departments" element={<Departments />} />
+        <Route path="/departments/:name" element={<Departments />} />
         
       </Routes>
     </AnimatePresence>
