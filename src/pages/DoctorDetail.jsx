@@ -1,11 +1,13 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+// import React from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Star, Award, Clock, MapPin, Phone, Mail, Calendar, ArrowRight } from 'lucide-react';
 import ReviewCard from '../components/ReviewCard';
 import { doctors } from '../data/doctors';
 
 export default function DoctorDetail() {
+  const navigate = useNavigate();
+  // const { id } = useParams();
   const { id } = useParams();
   const doctor = doctors.find(d => d.id === parseInt(id)) || doctors[0];
 
@@ -43,7 +45,7 @@ export default function DoctorDetail() {
     <div className="pt-20">
       {/* Hero Section with Doctor Info */}
       <section className="bg-gradient-to-br from-navy-950 via-royal-600 to-emerald-500 relative overflow-hidden pt-12 pb-20">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold rounded-full mix-blend-multiply filter blur-3xl"></div>
         </div>
@@ -119,22 +121,31 @@ export default function DoctorDetail() {
 
               {/* Action Buttons */}
               <div className="flex gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn-gold inline-flex items-center gap-2"
+               <motion.button
+                    onClick={() =>
+                    navigate("/contact", {
+                    state: {
+                     selectedDoctor: doctor,   // 🔥 sending doctor
+                    },
+                    })
+                    }
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="btn-gold inline-flex items-center gap-2"
                 >
                   <Calendar size={20} />
                   Book Appointment
                 </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn-outline text-white border-white hover:bg-white hover:text-navy-950 inline-flex items-center gap-2"
-                >
-                  <Phone size={20} />
-                  Call Now
-                </motion.button>
+                <a href={`tel:${doctor.phone}`}>
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="btn-outline text-white border-white hover:bg-white hover:text-navy-950 inline-flex items-center gap-2"
+  >
+    <Phone size={20} />
+    Call Now
+  </motion.button>
+</a>
               </div>
             </motion.div>
           </div>
